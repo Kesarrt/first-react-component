@@ -1,12 +1,11 @@
-// src/App.jsx
-import FirstComponent from './FirstComponent'
+import MainPage from './MainPage';
 
 function App() {
   return (
-    <div>
-      <FirstComponent />
-    </div>
-  )
+    <>
+      <MainPage />
+    </>
+  );
 }
 
-export default App
+export default App;
