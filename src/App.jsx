@@ -1,10 +1,9 @@
-// src/App.jsx
-import Counter from './Counter';
+import Calculator from './Calculator';
 
 function App() {
   return (
     <>
-      <Counter />
+      <Calculator />
     </>
   );
 }
