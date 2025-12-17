@@ -1,9 +1,10 @@
-import MainPage from './MainPage';
+// src/App.jsx
+import Counter from './Counter';
 
 function App() {
   return (
     <>
-      <MainPage />
+      <Counter />
     </>
   );
 }
