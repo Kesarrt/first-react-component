@@ -1,22 +1,22 @@
 // src/Counter.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Counter() {
-  // 1. Define the state variable "count" starting at 0
   const [count, setCount] = useState(0);
 
-  // 2. Define the function to increase the count
-  const increment = () => {
-    setCount(count + 1);
-  };
+  // useEffect runs whenever 'count' changes (because of the dependency array)
+  useEffect(() => {
+    // Check if the number is greater than 0 AND divisible by 3
+    if (count > 0 && count % 3 === 0) {
+      alert(`The current number ${count} is divisible by 3`);
+    }
+  }, [count]); // <--- This [count] is the dependency
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      {/* 3. Display the current number */}
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h2>Alert Counter</h2>
       <h3>Current Count: {count}</h3>
-
-      {/* 4. Button calls the increment function on click */}
-      <button onClick={increment}>Increment</button>
+      <button onClick={() => setCount(count + 1)}>Increase Count</button>
     </div>
   );
 }

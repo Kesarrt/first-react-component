@@ -1,9 +1,9 @@
-import UserData from './UserData';
+import Counter from './Counter';
 
 function App() {
   return (
     <div style={{ padding: '40px' }}>
-      <UserData />
+      <Counter />
     </div>
   );
 }
